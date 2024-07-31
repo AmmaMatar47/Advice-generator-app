@@ -1,0 +1,135 @@
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-Blue);
+  font-family: Manrope;
+  font-weight: 800;
+  color: var(--Light-Cyan);
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-Grayish-Blue);
+  padding: 3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+h1 {
+  color: var(--Neon-Green);
+  font-size: 0.9em;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+}
+
+blockquote {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+  max-width: 25rem;
+  text-align: center;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+.separator-icon {
+  margin-bottom: 1.2rem;
+}
+
+.separator-icon-desktop {
+  display: block;
+}
+
+.separator-icon-mobile {
+  display: none;
+}
+
+button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+
+  background-color: var(--Neon-Green);
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.7s ease;
+}
+button:hover {
+  box-shadow: 0 0 2rem var(--Neon-Green);
+}
+
+.nerd-icon {
+  transition: all 1s ease;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--Neon-Green) !important;
+}
+
+.attribution {
+  font-size: 0.6rem;
+}
+
+/* 656px */
+@media (width <= 41em) {
+  * {
+    font-size: 87.5%;
+  }
+
+  main {
+    max-width: 90vw;
+    margin: 0 2.5rem;
+  }
+  .separator-icon-desktop {
+    display: none;
+  }
+  .separator-icon-mobile {
+    display: block;
+  }
+  a {
+    font-size: 1em;
+  }
+}
